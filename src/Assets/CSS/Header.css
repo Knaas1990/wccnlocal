@@ -1,0 +1,133 @@
+/* HEADER */
+.main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #3b0a63, #5c1a8d);
+    z-index: 999;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #f5b400;
+}
+
+/* NAV */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.nav-menu a:hover {
+    color: #f5b400;
+}
+
+.register-btn {
+    background: #f5b400;
+    border: none;
+    padding: 10px 18px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    display: block;
+}
+
+/* LOGO CONTAINER */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO IMAGE WRAPPER */
+.mainlogo {
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO IMAGE */
+.mainlogo img {
+    height: 50px;
+    /* desktop size */
+    width: auto;
+    object-fit: contain;
+}
+
+/* HOVER EFFECT (optional but nice) */
+.mainlogo img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .mainlogo img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainlogo img {
+        height: 35px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #3b0a63;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+}
