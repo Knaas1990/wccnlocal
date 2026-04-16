@@ -7,6 +7,7 @@ import head1 from '../Assets/Images/head1.jpg'
 import head2 from '../Assets/Images/head2.jpg'
 import head3 from '../Assets/Images/head3.jpg'
 import makhachkalaBuilding from '../Assets/Images/Makhalakaimages/makhachkalaBuilding.png'
+import Makhachkalaleft from '../Assets/Images/Makhalakaimages/Makhachkalaleft.jpg'
 import mainslider1 from '../Assets/Images/Makhalakaimages/mainslider1.jpeg'
 import mainslider2 from '../Assets/Images/Makhalakaimages/mainslider2.jpeg'
 import mainslider3 from '../Assets/Images/Makhalakaimages/mainslider3.jpeg'
@@ -62,40 +63,64 @@ export default function Home() {
             <div className="countdown">
               <div className="time-box">
                 <h2 className="days">{timeLeft.days || "0"}</h2>
-                <p>Days</p>
+                <p className="days">Days</p>
               </div>
               <div className="time-box">
                 <h2 className="hours">{timeLeft.hours || "0"}</h2>
-                <p>Hour</p>
+                <p className="hours">Hour</p>
               </div>
               <div className="time-box">
                 <h2 className="minutes">{timeLeft.minutes || "0"}</h2>
-                <p>Minute</p>
+                <p className="minutes">Minute</p>
               </div>
               <div className="time-box">
                 <h2 className="seconds">{timeLeft.seconds || "0"}</h2>
-                <p>Second</p>
+                <p className="seconds">Second</p>
               </div>
             </div>
 
-            {/* LOGOS */}
-            <div className="hero-logos">
-              <div className="logo1"> <img src={head1} alt="" /></div>
-              <div className="logo3"><img src={head3} alt="" /></div>
-              <div className="logo2"> <img src={head2} alt="" /></div>
+
+            <div className="cnt">
+              {/* LOGOS */}
+              <div className="hero-logos">
+                <div className="logo1"> <img src={head1} alt="" /></div>
+                <div className="logo3"><img src={head3} alt="" /></div>
+                <div className="logo2"> <img src={head2} alt="" /></div>
+              </div>
+
+              <h1>29TH WORLD CONGRESS ON <br /> CLINICAL NUTRITION</h1>
+              <div className="hero-text-1">
+                <p className="hero-text"><i className="fa fa-calendar"></i>  17th - 19th September 2026</p>
+                <p className="hero-text"><i className="	fa fa-location-arrow"></i>367000, SRC «Juravli», 9 Entuziastov Street, Karaman 2, Makhachkala, Dagestan, Russia</p>
+                {/* <p className="hero-text"><i className="fa fa-clock-o"></i> 10:30 am</p> */}
+              </div>
+              <button className="primary-btn">ONLINE REGISTRATION</button>
             </div>
-
-            <h1>29TH WORLD CONGRESS ON CLINICAL NUTRITION</h1>
-
-            <p className="hero-text">
-              17th - 19th September 2026 <br />
-              367000, SRC «Juravli», 9 Entuziastov Street, Karaman 2, Makhachkala, Dagestan, Russia
-            </p>
-
-            <button className="primary-btn">ONLINE REGISTRATION</button>
           </div>
         </div>
       </section>
+
+
+      {/* SIGHTSEEING */}
+      <section className="sightseeing">
+        <div className="overlay">
+          {/* <div className="sightseeing-logos">
+            <img src={Makhachkalaleft} alt="" />
+          </div> */}
+          <div className="sightseeing-txt">
+            <div className="sightseeing-txt2">
+              <h2>“Dagestan is a land of knowledge, and the most precious guests for us  have always been those who come to us with knowledge."</h2>
+              <p>
+                Magomed Magomedov,
+                Chairman of the Organizing Committee, Director of the Institute of Biomechatronics,
+                Professor at Lomonosov Moscow State University.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* ---------------------------  main slider----------------- */}
       <section className="mainslider">
         <div className="slidersection">
@@ -105,12 +130,13 @@ export default function Home() {
             slidesPerView={1}
             loop={true}
             autoplay={{
-              delay: 5000, // ✅ 5 seconds
+              delay: 5000, //  
               disableOnInteraction: false,
             }}
             pagination={{ clickable: true }}
-            navigation={true} // ✅ arrows
+            navigation={false} // ✅ arrows
           >
+            <SwiperSlide> <img src={makhachkalaBuilding} alt="" /> </SwiperSlide>
             <SwiperSlide> <img src={mainslider1} alt="" /> </SwiperSlide>
             <SwiperSlide> <img src={mainslider2} alt="" /> </SwiperSlide>
             <SwiperSlide> <img src={mainslider3} alt="" /> </SwiperSlide>
@@ -137,46 +163,28 @@ export default function Home() {
 
       {/* TOPICS */}
       <section className="topics">
-        <h2>Main tentative topics of the WCCN Scientific programme:</h2>
+        <h2>Main tentative topics of the </h2>
+        <h3> WCCN-2026 "Nutrition and New Technologies in the Fight Against Non-Communicable Diseases"</h3>
 
         <div className="topics-grid">
           {[
-            "Physiology, anatomy and biochemistry of nutrition",
-            "Effect of feeding animals",
-            "Circadian food energy metabolism",
-            "Processed functional foods",
-            "Holistic approaches to nutrition",
-            "Food security for world health",
-            "Research in agriculture",
-            "Healthy food processing",
-            "Cutting edge medical nutrition",
-            "Micronutrient deficiency",
-            "Pharmaconutrition",
-            "Enteral and parenteral nutrition",
-            "Probiotics",
-            "Experimental nutrition",
-            "Food safety"
+            "The Role of Nutrition in Modern Approaches to the Prevention and Treatment of NCDs",
+            "Nutrigenomics and Personalized Nutrition",
+            "Gut Microbiota and Metabolic Health",
+            "Biomarkers of Nutritional Status and the Effectiveness of Interventions",
+            "Clinical studies on the effectiveness of personalized dietary interventions",
+            "Development and validation of functional foods and nutraceuticals",
+            "Epidemiological studies on dietary patterns and their association with NCDs",
+            "Pharmacological nutrition and natural health products",
+            "Regulatory and economic mechanisms: labeling, taxes, and government programs",
+            "Food safety and food intake guidelines of the EU, WHO, FAO and AHA 2026",
           ].map((item, i) => (
             <div key={i} className="topic-card">{item}</div>
           ))}
         </div>
       </section>
 
-      {/* SIGHTSEEING */}
-      <section className="sightseeing">
-        <div className="overlay">
-          <h2>Sightseeing</h2>
-          <p>
-            Sightseeing is one of the most enjoyable activities during travel.
-          </p>
 
-          <div className="gallery">
-            <img src="https://via.placeholder.com/300x200" alt="" />
-            <img src="https://via.placeholder.com/300x200" alt="" />
-            <img src="https://via.placeholder.com/300x200" alt="" />
-          </div>
-        </div>
-      </section>
     </>
   );
 }

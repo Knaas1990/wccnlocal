@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 /* GLOBAL */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+    font-family: "Oswald", sans-serif;
 }
 
 /* HERO */
@@ -20,29 +24,63 @@ body {
   justify-content: center;
 } */
 .hero-overlay {
-  background: linear-gradient(90deg,
-      rgba(43, 10, 90, 0.8),
-      rgba(90, 15, 163, 0.8));
+    background: linear-gradient(90deg, rgb(67 59 40 / 48%), rgb(69 51 5));
+    min-height: 100vh;
+        position: relative;
+}
+.info p {
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+.topics h2 {
+    font-size: 39px;
+    font-weight: 400;
+        margin-bottom: 0px;
+}
+.topics h3 {
+    font-size: 54px;
+    margin-bottom: 52px;
 }
 
 .hero-content {
-  text-align: center;
-  color: #fff;
-  padding: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hero h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin: 20px 0;
-  line-height: 52px;
+    font-size: 80px;
+    font-weight: 800;
+    margin: 20px 0;
+ 
 }
 
 .hero-text {
-  margin-bottom: 20px;
-  line-height: 23px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 300;
 }
-
+p.hero-text i {
+    margin-right: 4px;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #a67e15;
+}
+.hero-text-1 {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 31px;
+}
 /* BUTTON */
 .primary-btn {
   background: #ff2d75;
@@ -61,14 +99,15 @@ body {
 }
 
 .time-box h2 {
-  font-size: 60px;
+  font-size: 90px;
   font-weight: 800;
+  margin: 0;
 }
 
 .time-box p {
-  font-size: 14px;
+    font-size: 27px;
+    margin: 0;
 }
-
 /* COLORS */
 .days {
   color: #ff00ff;
@@ -94,7 +133,7 @@ body {
 /* INFO */
 .info {
   text-align: center;
-  padding: 50px 20px;
+  padding: 150px 20px;
   background: #eee;
 }
 
@@ -108,22 +147,26 @@ body {
 
 /* TOPICS */
 .topics {
-  padding: 50px 20px;
+  padding: 200px 20px;
   text-align: center;
 }
-
 .topics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .topic-card {
-  background: #b0125b;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
+    background: #fff;
+    color: #b0125b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid  #b0125b;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .topic-card:hover {
@@ -132,16 +175,32 @@ body {
 
 /* SIGHTSEEING */
 .sightseeing {
-  background: url("https://via.placeholder.com/1500x600") no-repeat center;
-  background-size: cover;
-  padding: 60px 20px;
+
+  padding: 0px;
+}
+.sightseeing-txt {
+    position: relative;
+    width: 100%;
+    padding: 300px 0;
+}
+.sightseeing-txt2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
 }
 
 .sightseeing .overlay {
-  background: rgba(60, 0, 100, 0.8);
-  padding: 40px;
-  text-align: center;
-  color: #fff;
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    color: #ff2d75;
+    display: flex;
+    gap: 10px;
+}
+.sightseeing-logos img {
+    height: 681px;
 }
 
 .gallery {
@@ -159,11 +218,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
   padding: 20px 40px;
   border-radius: 10px;
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 520px;
   gap: 20px;
 }
 
@@ -177,9 +235,12 @@ body {
 
 /* IMAGES */
 .hero-logos img {
-  max-height: 200px;
-  width: auto;
-  object-fit: contain;
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
 }
 
 
@@ -190,67 +251,61 @@ body {
 
 /* LOCATION TEXT */
 .hero-location {
-  position: absolute;
-  top: 80px;
-  right: 10px;
-  color: #ffffff24;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  /* background: rgba(0, 0, 0, 0.3); */
-  padding: 8px 16px;
-  /* border-radius: 20px; */
-  /* backdrop-filter: blur(6px); */
-  -webkit-backdrop-filter: blur(6px);
-  /* box-shadow: 0 4px 15px rgba(0,0,0,0.3); */
-  font-weight: 700;
-  font-family: serif;
+    position: absolute;
+    top: 92px;
+    right: 10px;
+    color: #fefefe2e;
+    font-size: 31px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    font-weight: 400;
 }
 
 /* -----------------Slider Section-------------------------- */
 /* MAIN SLIDER WRAPPER */
 .mainslider {
   background: #f4f6fb;
-  /* light contrast */
-  padding: 80px 0;
-
-  /* separation effect */
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  margin-top: -60px;
-  /* hero se overlap */
+  padding: 0px;
+ 
 }
-
+.sightseeing .overlay h2 {
+    font-size: 54px;
+        margin-bottom: 35px;
+}
+.sightseeing .overlay p {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 300;
+}
 /* INNER BOX */
 .slidersection {
-  max-width: 1100px;
+  /* max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-
-  /* lift effect */
-  transform: translateY(-40px);
+  transform: translateY(-40px); */
 }
 
 /* SWIPER BOX DESIGN */
 .slidersection .swiper {
-  border-radius: 20px;
+  border-radius: 0px;
   overflow: hidden;
 
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  background: #000;
+  /* box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background: #000; */
 }
 
 /* IMAGE */
 .slidersection img {
   width: 100%;
-  height: 420px;
-  object-fit: cover;
+  height: 100vh;
+ 
+  /* object-fit: cover; */
   transition: transform 0.5s ease;
 }
 
 /* IMAGE HOVER (premium effect) */
 .slidersection .swiper-slide-active img {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 /* DOTS */
@@ -285,11 +340,7 @@ body {
   .slidersection img {
     height: 250px;
   }
-
-  .mainslider {
-    padding: 40px 0;
-    margin-top: -30px;
-  }
+ 
 
   .slidersection {
     transform: translateY(-20px);

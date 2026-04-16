@@ -23,7 +23,7 @@ function App() {
         <Route path="/registration" element={<LayoutRegistration />} />
         <Route path="/awards" element={<LayoutAwards />} />
         <Route path="/gallery" element={<LayoutGallery />} />
-        <Route path="/programe" element={<LayoutProgramme />} />
+        <Route path="/programme" element={<LayoutProgramme />} />
       </Routes>
     </BrowserRouter>
     </>

@@ -8,9 +8,20 @@ export default function Footer() {
         {/* Column 1 */}
         <div className="footer-col">
           <h3>Venue & Contacts</h3>
-          <p>367000, SRC Juravli, 9 Enthusiast Street</p>
-          <p>Karaman 2, Russia</p>
-          <p>Email: amgerman@gmail.com</p>
+          <div className="contact-cn">
+            <div className="contact-in"><i className="fa fa-home"></i></div>
+            <div className="contact-in"> <p>367000, SRC «Juravli», 9 Entuziastov Street, Karaman 2,Makhachkala, Dagestan, Russia</p></div>
+          </div>
+
+          <div className="contact-cn">
+            <div className="contact-in"><i className="fa fa-user"></i></div>
+            <div className="contact-in"> <p>Dr. Aminat Magomedova, PhD, FICN, President Elect, International College of Nutrition</p></div>
+          </div>
+
+          <div className="contact-cn">
+            <div className="contact-in"><i className="fa fa-envelope"></i></div>
+            <div className="contact-in"> <p>amgerma@gmail.com</p></div>
+          </div>
         </div>
 
         {/* Column 2 */}
